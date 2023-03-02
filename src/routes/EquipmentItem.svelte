@@ -35,9 +35,15 @@
 
 <style>
   .name {
-    margin-left: 16px;
-    min-width: 145px;
+    flex-grow: 1;
+    min-width: 155px;
   }
+  @media(max-width: 374px) {
+    .name {
+      min-width: 105px;
+    }
+  }
+
   .empty {
     text-decoration: line-through;
     opacity: .5;

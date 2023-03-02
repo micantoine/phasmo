@@ -25,3 +25,7 @@
     </g>
   </g>
 </svg>
+
+<style>
+  svg { max-width: 100%; }
+</style>
