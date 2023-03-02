@@ -1,6 +1,7 @@
 {
 	"name": "phasmo",
 	"version": "0.0.1",
+	"homepage": "https://micantoine.github.io/phasmo",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
