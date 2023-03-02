@@ -49,9 +49,4 @@
   .name ~ :global(.button-icon) + :global(.button-icon) {
     margin-left: 8px;
   }
-  .all {
-    text-transform: lowercase;
-    font-variant: small-caps;
-    font-weight: 700;
-  }
 </style>
