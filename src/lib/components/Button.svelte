@@ -4,8 +4,9 @@
 
   export let href: HTMLAnchorAttributes['href'] = null;
   export let type: HTMLButtonAttributes['type'] = 'button';
-  export let color: 'primary' | '' = '';
+  export let color: 'primary' | 'light' | '' = '';
   export let title = '';
+  export let small = false;
 
   let tag: 'a' | 'button';
   $: tag = href === null ? 'button' : 'a';
@@ -20,6 +21,8 @@
 <svelte:element
   class="button"
   class:primary={color === 'primary'}
+  class:light={color === 'light'}
+  class:small
   this={tag}
   href={hrefAttribute}
   type={typeAttribute}
@@ -38,13 +41,6 @@
     --button-bg-color-s: 0%;
     --button-bg-color-l: 95%;
   }
-  .primary {
-    --button-text-color: var(--color-theme-contrast);
-    --button-bg-color: var(--color-theme);
-    --button-bg-color-h: var(--color-theme-h);
-    --button-bg-color-s: var(--color-theme-s);
-    --button-bg-color-l: var(--color-theme-l);
-  }
   .button {
     padding: 8px 20px;
     color: var(--button-text-color);
@@ -57,5 +53,28 @@
   .button:hover {
     background-color: hsl(var(--button-bg-color-h), var(--button-bg-color-s), calc(var(--button-bg-color-l) * 0.9));
     text-decoration: none;
+  }
+  .button:active {
+   box-shadow: inset 1px 1px 1px hsl(var(--button-bg-color-h), var(--button-bg-color-s), calc(var(--button-bg-color-l) * .5));
+  }
+  .primary {
+    --button-text-color: var(--color-theme-contrast);
+    --button-bg-color: var(--color-theme);
+    --button-bg-color-h: var(--color-theme-h);
+    --button-bg-color-s: var(--color-theme-s);
+    --button-bg-color-l: var(--color-theme-l);
+  }
+  .light {
+    --button-text-color: var(--color-light-contrast);
+    --button-bg-color: var(--color-light);
+    --button-bg-color-h: var(--color-light-h);
+    --button-bg-color-s: var(--color-light-s);
+    --button-bg-color-l: var(--color-light-l);
+    border: 1px solid hsl(var(--button-bg-color-h), var(--button-bg-color-s), calc(var(--button-bg-color-l) * .9));
+    box-shadow: 1px 1px 1px hsl(var(--button-bg-color-h), var(--button-bg-color-s), calc(var(--button-bg-color-l) * .5));
+  }
+  .small {
+    padding: 5px 12px;
+    font-size: 14px;
   }
 </style>
