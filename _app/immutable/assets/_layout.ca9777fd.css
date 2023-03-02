@@ -58,7 +58,6 @@
   --font-mono: 'Fira Mono', monospace;
   --color-bg-0: rgb(202, 216, 228);
   --color-bg-1: hsl(209, 36%, 86%);
-  --color-bg-2: hsl(224, 44%, 95%);
   --color-theme: #ff3e00;
   --color-theme-contrast: #fff;
   --color-theme-h: 15;
@@ -66,6 +65,11 @@
   --color-theme-l: 50%;
   --color-text: rgba(0, 0, 0, 0.7);
   --color-border: rgba(0, 0, 0, 0.1);
+  --color-light: #fff;
+  --color-light-contrast: #333;
+  --color-light-h: 0;
+  --color-light-s: 0%;
+  --color-light-l: 100%;
   font-family: var(--font-body);
   color: var(--color-text);
 }
