@@ -1,6 +1,7 @@
 <script lang="ts">
   import { equipments } from '$lib/stores';
   import Config from '$lib/config';
+  import { Button } from '$lib/components';
   import EquipmentItem from './EquipmentItem.svelte';
 
   function fillUp() {
@@ -31,9 +32,9 @@
 </script>
 
 <div class="actions">
-  <button on:click={fillUp} type="button">All</button>
-  <button on:click={reset} type="button">Reset</button>
-  <button on:click={clear} type="button">Clear</button>
+  <Button color="light" on:click={fillUp} small>All</Button>
+  <Button color="light" on:click={reset} small>Reset</Button>
+  <Button color="light" on:click={clear} small>Clear</Button>
 </div>
 
 <ul>

@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { Equipment } from '$lib/models/Equipment';
   import { Counter, ButtonIcon } from '$lib/components';
-  import { Trash, Tray } from '$lib/icons';
+  import { Trash, Download } from '$lib/icons';
 
   export let equipment: Equipment;
 
@@ -26,7 +26,7 @@
 />
 
 <ButtonIcon on:click={fillUp}>
-  <Tray title="Fill up" width={16} />
+  <Download title="Fill up" width={16} />
 </ButtonIcon>
 
 <ButtonIcon on:click={remove}>
@@ -36,7 +36,7 @@
 <style>
   .name {
     margin-left: 16px;
-    min-width: 165px;
+    min-width: 145px;
   }
   .empty {
     text-decoration: line-through;
@@ -45,5 +45,13 @@
 
   .name ~ :global(.button-icon) {
     margin-left: 16px;
+  }
+  .name ~ :global(.button-icon) + :global(.button-icon) {
+    margin-left: 8px;
+  }
+  .all {
+    text-transform: lowercase;
+    font-variant: small-caps;
+    font-weight: 700;
   }
 </style>
