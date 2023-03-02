@@ -105,6 +105,9 @@ button {
 button:focus:not(:focus-visible) {
   outline: none;
 }
+.icon {
+  overflow: visible;
+}
 .icon path {
   fill: currentColor;
 }.app.svelte-1k4ua0u{display:flex;flex-direction:column;min-height:100vh}main.svelte-1k4ua0u{padding:1rem;width:100%;max-width:64rem;margin:0 auto;box-sizing:border-box}
